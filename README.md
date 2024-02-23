@@ -1,4 +1,4 @@
-# Echowr - Wrapper for Echo server
+# Echowr - Echo server wrapper
 
 ```go
 // healthcheck

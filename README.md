@@ -5,7 +5,7 @@
  sys := server.NewRouters()
  sys.AddRouter("/healthcheck", 
      server.Methods{http.MethodGet: func(c server.Context) error {
-         return c.String(http.StatusOK, "test passed")
+         return c.String(http.StatusOK, "OK")
      },
  })
  
@@ -19,7 +19,7 @@
  a.Start()
 
  sig := <-sigChan
- fmt.Printf("\nSignal %s received, shutting down\n", sig.String())
+ fmt.Printf("Signal %s received, shutting down\n", sig.String())
 
 // shutdown
  _ = a.GracefulShutdown()
